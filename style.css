@@ -1,3 +1,90 @@
-h1 {
-    color:red;
+body{
+    color:black;
+    font-family: tahoma;
+    padding:0;
+    margin:0;
+}
+main{
+    padding-top: 90px
+}
+
+
+
+.logoParrot {
+    max-width: 101px;
+}
+
+.topbar{
+    background-color: #D92332;
+    color : white;
+    font-size: 10px;
+    width:100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header{
+    font-weight: bold;
+    font-size: 12px;
+    height : 75px;
+    border-color: black;
+    border-style: solid;
+    position: fixed;
+    width:100%;
+}
+
+.container{
+    color :#D92332;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width:100%;
+}
+
+
+nav ul{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    height : 75px;
+    display:flex;
+}
+
+nav ul li{
+    display: inline-flex;
+    margin:0 10px;
+    width: 101px;
+    height:75px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color:#D92332;
+}
+
+nav ul li:hover{
+    background-color:grey;
+}
+
+
+
+
+
+
+.herosection{
+    flex-shrink: 0;
+    display: flex;
+    height:500px;
+}
+.heropicture{
+    max-width: 500px;
+}
+
+
+.column{
+    flex-direction: column;
 }
