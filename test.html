@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Styles pour la div principale */
+        body{
+            margin: 0 auto;
+            display:block;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            display: flex; /* Utilisation de flex pour aligner les éléments côte à côte */
+            align-items: center; /* Centrer verticalement les éléments */
+            text-align: center;
+        }
+
+        /* Styles pour l'image */
+        .image {
+            width: 50%;
+            max-height: 400px;
+            object-fit: cover;
+        }
+
+        /* Styles pour le titre et le texte */
+        .content {
+            flex: 1; /* Permet aux éléments de texte de prendre autant d'espace que possible */
+            padding: 1rem; /* Ajoutez un peu d'espace autour du texte */
+        }
+
+        .title {
+            font-size: 1.5rem;
+        }
+
+        .text {
+            font-size: 1rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div>
+                <img src="/ressources/images/responsableGarage.jpg" alt="Image" class="image">
+            </div>
+            <div>
+                <h1 class="title">Titre de l'image</h1>
+                <p class="text">Depuis 2021, le Garage V. Parrot à Toulouse offre 15 ans d'expertise dévouée. Réparation automobile, entretien personnalisé, vente de véhicules d'occasion : confiez-nous votre voiture, elle mérite l'excellence."</p>
+            </div>
+        </div>
+    </main>
+        
+</body>
+
+</html>
