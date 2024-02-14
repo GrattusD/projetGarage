@@ -28,11 +28,12 @@ body{
 header{
     font-weight: bold;
     font-size: 12px;
-    height : 50px;
+    background-color: white;
     border-color: black;
     border-style: solid;
     position: fixed;
     width:100%;
+    z-index: 1000; /*z index élevé pour que l'image reste derrière quand on scroll*/
 }
 
 .container{
@@ -42,19 +43,17 @@ header{
     width:100%;
 }
 
-
 nav ul{
     list-style-type: none;
     padding:0;
     margin:0;
-    height : 50px;
+    height:50px;
 }
 
 nav ul li{
-    display: inline-flex;
+    display: flex;
     margin:0 10px;
     width: 101px;
-    height:50px;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -75,7 +74,7 @@ nav ul li:hover{
 
 main{
     margin: 0 auto;
-    padding-top: 60px;
+    padding-top: 90px;
     padding-bottom: 90px;
     display:block;
     margin-right: auto;
@@ -128,4 +127,33 @@ main{
 
 footer{
     background-color: #23D9CA;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer-container{
+    justify-content: center;
+}
+
+.footer-col{
+    width: calc(33.33%-20px);
+    max-width: 224px;
+    margin-right: 20px;
+}
+.footer-col:last-child{
+    margin-right:0;
+}
+
+.footer-col img{
+    width:50%;
+    align-items: center;
+}
+
+.garage-map{
+    justify-content: center;
+}
+
+.social-icons img{
+    width:40px;
+    margin-right:10px;
 }
