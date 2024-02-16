@@ -56,9 +56,56 @@
         <div class="footer-container flex">
             <div id="timetable" class="footer-col">
                 <h2>horaires d'ouverture</h2>
-    
+                <!--en JS et php?-->
+                <!--test en JS-->
+                <!--créer en php une connexion à la base de donnée Timetable-->
+                <!--test en php
+                <?php   
+                    
+                    $connsql = new mysqli ("localhost", "username", "password", Timetable);
+                    if ($connsql->connect-error) {
+                        die("echec de connexion: ".$connsql->connect_error);
+                    }
+
+                    $sql = "SELECT * FROM Timetable";
+                    $result = $conn->query($sql);
+
+                    if($result ->num_rows>0){
+                        $timetabledata = array();
+
+                        while ($row = sresult->fetch_assoc()) {
+                            $timetableData[] = $row;
+                        }
+                        
+                        $result->free();
+                        $connsql->close();
+                    } else{
+                        echo "erreur dans l'execution : ".$connsql->error;
+                    }
+                    ?>
+                -->
                 <table>
-                    <tr>lundi : </tr>
+                    <!--
+                        <?php
+                    foreach ($timetableData as $data){
+                        echo "<tr>";
+                        echo "<td>".$data['jour']."</td>";
+                        if ($data['okam']==='oui'){
+                            echo "<td>".$date['opentimeam']."</td>";
+                            echo "<td>".$date['closetimeam']."</td>";
+                        } else {
+                            echo "<td>Fermé </td><td></td>";
+                        }
+                        if ($data['okpm']==='oui'){
+                            echo "<td>".$date['opentimepm']."</td>";
+                            echo "<td>".$date['closetimepm']."</td>";
+                        }else {
+                            echo "<td>Fermé </td><td></td>";
+                        }
+                        echo "</tr>";
+                    }
+                    ?>
+                    -->
                 </table>
             </div>
             <div id="Garagemap" class="footer-col">
