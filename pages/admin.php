@@ -24,33 +24,37 @@
                     <li><a href="reparations.html"> Carrosserie et Réparation </a></li>
                     <li><a href="occasions.html"> Véhicules d'occasion </a></li>
                     <li><a href="services.html"> Services </a></li>
-                    <li> <a href="/pages/admin.php"></a>Contact</li>
+                    <li> Contact</li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <div class="herosection flex">
-            <div class="heropic flex">
-                <img src="/ressources/images/responsableGarage.jpg" alt="M.Parrot responsable du garage">
-            </div>
-            <div class="column">
-                <h1 class="herotitle">L'Excellence Automobile à Toulouse depuis 2021</h1>
-                <div class="herotext flex">
-                    <p>Depuis 2021, le Garage V. Parrot à Toulouse offre 15 ans d'expertise dévouée. Réparation
-                        automobile, entretien personnalisé, vente de véhicules d'occasion : confiez-nous votre voiture,
-                        elle
-                        mérite l'excellence."</p>
+<main>
+    <h1>Bonjour M. Parrot,</h1>
+    <p>que souhaitez-vous faire aujourd'hui?</p>
+
+    <form action="">
+        <fieldset id="timetable">
+            <legend>
+                <h2>Horaires d'ouverture</h2>
+            </legend>
+            <div id="monday">
+                Lundi
+                <div>
+                    <input type="checkbox" name="selected" id="mon_morning">
                 </div>
+
             </div>
-        </div>
-        <br>
-        <div>réparations</div>
-        <br>
-        <div>véhicules d'occasion</div>
-        <br>
-    </main>
+    </form>
+
+</main>
+
+
+
+
+
+
 
     <footer>
         <div class="footer-container flex">
