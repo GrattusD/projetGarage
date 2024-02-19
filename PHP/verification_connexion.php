@@ -6,7 +6,7 @@ $servername = "localhost";
 $username_db = "root";
 $password_db = "";
 /*nom de base de données à ajouter*/
-$dbname = "ecfgarageedouardmeyer"
+$dbname = "ecfgarage";
 
 $conn = new mysqli($servername, $username_db, $password_db, $dbname);
 
