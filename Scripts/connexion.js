@@ -4,7 +4,7 @@
 /*si pas ok ==> erreur mdp ou erreur requête*/
 
 
-document.getElementById("form_connexion").addEventListener("submit" function(event){
+document.getElementById("form_connexion").addEventListener("submit", function(event){
     event.preventDefault();
 
     var formData= new FormData(this);
@@ -13,11 +13,11 @@ document.getElementById("form_connexion").addEventListener("submit" function(eve
     var connex = new XMLHttpRequest();
     var url= "../PHP/verification_connexion.php;"
     connex.open("POST", url, true);
-    connex.onreadystatechange= funtion(){
+    connex.onreadystatechange= function(){
         if (connex.readyState === XMLHttpRequest.DONE){
             if (connex.status===200){
                 /*connexion serveur réussie*/
-                if (connex.responseTect === "connexion_reussie"){
+                if (connex.responseText === "connexion_reussie"){
                     window.location.href= "page_interne.html";
                 }else{
                     alert("Nom d'utilisateur ou mot de passe incorrect");
