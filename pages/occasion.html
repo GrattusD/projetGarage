@@ -7,6 +7,9 @@
     <title>Mon projet Garage</title>
     <link rel="stylesheet" href="/CSS/headerfooter.css">
     <link rel="stylesheet" href="/CSS/occasion.css">
+    <script crossorigin src=”https://unpkg.com/react@18/umd/react.development.js” defer></script>
+    <script crossorigin src=”https://unpkg.com/react-dom@18/umd/react-dom.development.js” defer></script>
+    <script src=”occasion.js” defer></script>
 </head>
 
 <body>
@@ -30,47 +33,51 @@
             </nav>
         </div>
     </header>
-<main>
-<div>
-    <h1>Partie en développement</h1>
-    <p> on fera des "cartes" de type Vehicules avec un template avec les vahicules qui correspondent au critères de sélection</p>
-</div>
-<div class="bandeau">
-    <div class="flex">
-        <h1>Nos véhicules d'occasion</h1>
-    </div>
-</div>
+    <main>
+        <div>
+            <h1>Partie en développement</h1>
+            <p> on fera des "cartes" de type Vehicules avec un template avec les vahicules qui correspondent au critères
+                de sélection</p>
+        </div>
+        <div class="bandeau">
+            <div class="flex">
+                <h1>Nos véhicules d'occasion</h1>
+            </div>
+        </div>
 
-<section >
-    <!-- ici on position la partie filtre avec les différents filtres-->
-<aside id="filters">
-    <div class="filterContent">
-        <div class="filterGroup">
-            <h3>Marques</h3>
-            <div></div>
-        </div>
-    <div class="filterContent">
-        <div class="filterGroup">
-            <h3>Prix</h3>
-            <div></div>
-        </div>
-    <div class="filterContent">
-        <div class="filterGroup">
-            <h3>Année</h3>
-            <div></div>
-        </div>
-    <div class="filterContent">
-        <div class="filterGroup">
-            <h3>Kilomètrage</h3>
-            <div></div>
-        </div>
-    </div>
-</aside>
+        <section>
+            <!-- ici on position la partie filtre avec les différents filtres-->
+            <aside id="filters">
+                <div class="filterContent">
+                    <div class="filterGroup">
+                        <h3>Marques</h3>
+                        <div></div>
+                    </div>
+                    <div class="filterContent">
+                        <div class="filterGroup">
+                            <h3>Prix</h3>
+                            <div></div>
+                        </div>
+                        <div class="filterContent">
+                            <div class="filterGroup">
+                                <h3>Année</h3>
+                                <div></div>
+                            </div>
+                            <div class="filterContent">
+                                <div class="filterGroup">
+                                    <h3>Kilomètrage</h3>
+                                    <div></div>
+                                </div>
+                            </div>
+            </aside>
 
-<!--Dans cette section nous ferons apparaitre les résultats avec les cartes des véhicules-->
-<section class="flex" id="listVehicules"></section>
-</section>
-</main>
+
+            <div id='root'>
+            </div>
+                <!--Dans cette section nous ferons apparaitre les résultats avec les cartes des véhicules-->
+                <section class="flex" id="listVehicules"></section>
+        </section>
+    </main>
 
 
 
