@@ -1,4 +1,4 @@
-flex {
+.flex {
     display: flex;
 }
 
@@ -22,4 +22,14 @@ main{
     margin-left:auto;
     max-width: 710px;
     flex-grow:1;
+}
+
+section{
+    display: flex;
+}
+
+aside{
+    border-color: black;
+    border-style: solid;
+    padding: 10px;
 }
