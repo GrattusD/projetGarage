@@ -32,4 +32,22 @@ aside{
     border-color: black;
     border-style: solid;
     padding: 10px;
+    margin-right:5px;
+}
+
+.card{
+    margin: 10px;
+}
+
+.card p{
+    font-size: 12px;
+}
+
+.btn{
+    background-color: #D92332;
+    color:white;
+    border-style:solid black;
+}
+.btn:hover{
+    background-color: #D92332;
 }
