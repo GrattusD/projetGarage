@@ -20,7 +20,7 @@ main{
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    position:relative;
+    position: relative;
 }
 
 .heropic::after {
@@ -56,15 +56,42 @@ main{
     justify-content: center;
     align-items: center;
     background-color:#23D9CA;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
+
 .section div{
-    position: relative;
-}
-.section img{
-    object-fit: cover;
-    overflow:hidden;
     width:100%;
-    height: 200px;
+    height: 250px;
+    overflow:hidden;
+    position:relative;
+}
+.section div img{
+    position:absolute;
+    bottom:-100px;
+    max-width:100%;
+    height:auto;
+    object-fit:cover;
+    object-position:bottom;
+}
+h2{
+    font-size: xx-large;
+}
+.section p{
+    font-weight: bold;
+}
+
+.section a{
+    text-decoration: none;
+    background-color:#D92332;
+    margin: 20px;
+    padding:10px;
+    font-size: 32px;
+    border-radius: 10px;
+    color: white;
+}
+.section a:hover{
+    background-color: white;
+    color:#D92332;
 }
 
 /*mise en page du footer*/

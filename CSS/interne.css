@@ -1,0 +1,51 @@
+main{
+    margin: 0 auto;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    display:flex;
+    flex-direction:column;
+    margin-right: auto;
+    margin-left:auto;
+    max-width: 710px;
+    flex-grow:1;
+}
+
+
+.btn{
+    background-color: #D92332;
+    color:white;
+    border-style:solid black;
+}
+.btn:hover{
+    background-color: #D92332;
+}
+
+div{
+
+}
+
+label{
+    margin-right: 10px;
+}
+
+fieldset{
+    display:flex;
+    flex-direction: column;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+fieldset div{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+}
+
+form{
+    margin-top: 100px;
+}
+button[type="submit"]{
+    margin-top:10px;
+}
