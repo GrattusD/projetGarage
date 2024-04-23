@@ -20,7 +20,7 @@
 
             <nav>
                 <ul class="flex">
-                <li><a href="/../index.html"> Accueil </a></li>
+                    <li><a href="/../index.html"> Accueil </a></li>
                     <li><a href="/pages/reparations.html"> Carrosserie et Réparation </a></li>
                     <li><a href="/pages/occasion.html"> Véhicules d'occasion </a></li>
                     <li><a href="/pages/interne.html"> Interne </a></li>

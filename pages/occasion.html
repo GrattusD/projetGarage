@@ -28,7 +28,7 @@
                 <ul class="flex">
                     <li><a href="/../index.html"> Accueil </a></li>
                     <li><a href="/pages/reparations.html"> Carrosserie et Réparation </a></li>
-                    <li><a href="/pages/occasion.html"> Véhicules d'occasion </a></li>
+                    <li class="selectedPage"><a href="/pages/occasion.html"> Véhicules d'occasion </a></li>
                     <li><a href="/pages/interne.html"> Interne </a></li>
                     <li><a href="/pages/contact.html">Contact</a></li>
                 </ul>
@@ -36,20 +36,18 @@
         </div>
     </header>
     <main>
-        <div>
-            <h1>Partie en développement</h1>
-            <p> on fera des "cartes" de type Vehicules avec un template avec les vahicules qui correspondent au critères
-                de sélection</p>
-        </div>
-        <div class="bandeau">
-            <div class="flex">
-                <h1>Nos véhicules d'occasion</h1>
+        <div class="bandeau container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <img src="/ressources/images/mathieu-renier-4WBvCqeMaDE-unsplash.jpg" class="img-fluid img-header" alt="image voiture d'occasion">
+                    <h1>Nos véhicules d'occasion</h1>
+                </div>
             </div>
         </div>
 
         <section>
             <!-- ici on position la partie filtre avec les différents filtres-->
-            <aside id="filters">
+            <aside id="filters" class="shadow">
                 <h2>Filtres</h2>
                 <div class="filterContent">
                     <div class="filterGroup">
@@ -70,26 +68,54 @@
                     <div class="filterContent">
                         <div class="filterGroup">
                             <h4>Prix</h4>
-                            <div></div>
+                            <div class="minMax">
+                                <div>
+                                    <label for="price_min">Min.</label>
+                                    <input type="text" id="price_min" placeholder="0" value>
+                                </div>
+                                <div>
+                                    <label for="price_max">Max.</label>
+                                    <input type="text" id="price_max" placeholder="50000" value>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                     <div class="filterContent">
                         <div class="filterGroup">
                             <h4>Année</h4>
-                            <div></div>
+                            <div class="minMax">
+                                <div>
+                                    <label for="year_min">Min.</label>
+                                    <input type="text" id="year_min" placeholder="1980" value>
+                                </div>
+                                <div>
+                                    <label for="year_max">Max.</label>
+                                    <input type="text" id="year_max" placeholder="2023" value>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="filterContent">
                         <div class="filterGroup">
                             <h4>Kilomètrage</h4>
-                            <div></div>
+                            <div class="minMax">
+                                <div>
+                                    <label for="km_min">Min.</label>
+                                    <input type="text" id="km_min" placeholder="0" value>
+                                </div>
+                                <div>
+                                    <label for="km_max">Max.</label>
+                                    <input type="text" id="km_max" placeholder="50000" value>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <button type="button" id="filtrer" class="btn">Filtrer </div>
                 </div>
             </aside>
-
-
+            
+            
             <div id='root'>
             </div>
                 <!--Dans cette section nous ferons apparaitre les résultats avec les cartes des véhicules-->
