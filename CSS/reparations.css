@@ -1,0 +1,44 @@
+main{
+    margin: 0 auto;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    display:flex;
+    flex-direction:column;
+    margin-right: auto;
+    margin-left:auto;
+    max-width: 710px;
+    flex-grow:1;
+}
+
+.img-header{
+    position:static;
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+    opacity: 0.7;
+}
+
+h2 {
+    margin-bottom: 1rem ;
+    margin-top: 1.5rem;
+    font-size: 1.5rem ;
+    line-height: 2rem ;
+    font-weight: 700 ;
+    font-style: normal ;
+}
+
+section{
+    margin : 10px;
+}
+
+section .card-header{
+    background-color:#23D9CA;
+}
+
+section .card-text{
+    margin-left: 10%;
+}
+
+.card{
+    box-shadow: shadow;
+}
