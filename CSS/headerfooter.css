@@ -84,12 +84,6 @@ nav ul li:hover a{
     color:white;
 }
 
-/*mise en page du main*/
-
-main{
-    padding-top:90px;
-}
-
 /*mise en page du footer*/
 
 footer{
@@ -170,6 +164,7 @@ footer h2{
     .topbar{
         display:none;
     }
+
 
     /*flex mobile du footer*/
     footer .footer-container{

@@ -73,11 +73,13 @@ main{
     object-fit:cover;
     object-position:bottom;
 }
+
 h2{
     font-size: xx-large;
 }
 .section p{
     font-weight: bold;
+    padding: 10px;
 }
 
 .section a{

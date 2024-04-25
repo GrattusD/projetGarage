@@ -1,0 +1,26 @@
+main{
+    margin: 0 auto;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    display:flex;
+    flex-direction:column;
+    margin-right: auto;
+    margin-left:auto;
+    max-width: 710px;
+    flex-grow:1;
+}
+
+
+form div{
+    padding: 10px;
+}
+
+.btn{
+    background-color: #D92332;
+    color:white;
+    border-style:solid black;
+}
+.btn:hover{
+    background-color: #D92332;
+}
+
