@@ -11,6 +11,7 @@ utilisation du framework Bootstrap 5.3.3 (inclus avec CDN)
 Pour l'installation en local:
     -installation des fichiers du site avec git
 reprérer le dossier cible dans xampp (par défaut htdocs)
+créer le dossier projetGarage
 en ligne de commande:
 cloner le dépôt avec la fonction git clone https://github.com/GrattusD/projetGarage.git
 
@@ -18,7 +19,7 @@ configurer l'environnement
     -installation de la base de données
 démarrer le control panel de xampp
 lancer Apache et Mysql
-importer la base de donnée du dossier Base de données Mysql (créer une nouvelle base de données sur votre serveur de base de données (ici ecfgarageedouardmeyer et importer le fichier fourni avec mysql -u root -p ecfgarage < database_structure.sql))
+importer la base de donnée du dossier Base de données Mysql (créer une nouvelle base de données sur votre serveur de base de données (ici ecfgarage et importer le fichier fourni avec mysql -u root -p ecfgarage < database_structure.sql))
 
 # historique du deploiement, deploiement
  inscription sur alwaysdata
@@ -32,6 +33,7 @@ https://ecfgarageedouardmeyer.alwaysdata.net/
 
 Automatisation du déploiement via github
 paramètrage github, extension ftp deploy
+le fichier config.php est mis dans le dossier admin
 
 # point à date du dépôt:
 il manque encore beaucoup d'éléments qui sont en développement:

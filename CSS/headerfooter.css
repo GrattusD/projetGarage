@@ -134,6 +134,12 @@ footer h2{
     margin-right:10px;
 }
 
+#timetable td{
+    white-space: nowrap;
+    font-size:12px;
+    max-width:100%;
+}
+
 /*media query pour taille d'acran plus petit */
 
 @media (max-width: 720px) {

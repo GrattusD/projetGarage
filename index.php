@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon projet Garage</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="/CSS/headerfooter.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
@@ -20,7 +22,7 @@
 
             <nav>
                 <ul class="flex">
-                    <li><a href="/../index.html"> Accueil </a></li>
+                    <li class="selectedPage"><a href="/../index.html"> Accueil </a></li>
                     <li><a href="/pages/reparations.html"> Carrosserie et Réparation </a></li>
                     <li><a href="/pages/occasion.html"> Véhicules d'occasion </a></li>
                     <li><a href="/pages/interne.html"> Interne </a></li>
@@ -47,7 +49,9 @@
         </div>
         <br>
         <div class="section flex">
-            <img src="" alt="voiture et garagiste">
+        <div>
+                <img src="/ressources/images/garage01.jpg" alt="voiture et garagiste">
+            </div>
             <h2>réparations</h2>
             <p>Pour une réparation, l'entretien de cotre véhicules ou pour améliorer votre voiture, vous pouvez compter sur notre équipe expérimentée pour prendre soin de votre véhicule.
                 Retrouvez l'ensemble de notre offre.
@@ -55,7 +59,9 @@
         </div>
         <br>
         <div class="section flex">
-            <img src="" alt="voiture et garagiste">
+            <div>
+                <img src="/ressources/images/mathieu-renier-4WBvCqeMaDE-unsplash.jpg" alt="véhicule d'occasion">
+            </div>
             <h2>véhicules d'occasion</h2>
             <p>Découvrez toute une gamme de véhicules d'occasion que nous avons pris soin de préparer pour vous! Vous trouverez votre bonheur dans notre garage.</p>
         </div>
@@ -66,27 +72,38 @@
         <div class="footer-container flex">
             <div id="timetable" class="footer-col">
                 <h2>horaires d'ouverture</h2>
+                <table >
+                    <thead>
+                        <tr>
+                            <th>Jour</th>
+                            <th colspan="2">Matin</th>
+                            <th colspan="2">Après-midi</th>
                 <?php   
-                    /*essai avec pdo */
+                    include('../config.php');
+                    /*construction de la table des horaires avec php*/
                     try{
-                        $horairespdo = new PDO('mysql:host=localhost;dbname=ecfgarage', 'root', '');
+                        $horairespdo = new PDO('mysql:host='.$dbHost.';dbname='.$dbName, $dbUsername, $dbPassword);
                         foreach ($horairespdo->query('SELECT jour, okam, DATE_FORMAT(opentimeam, "%H:%i") as opentimeam, DATE_FORMAT(closetimeam, "%H:%i") as closetimeam, okpm, DATE_FORMAT(opentimepm, "%H:%i") as opentimepm, DATE_FORMAT(closetimepm, "%H:%i") as closetimepm FROM timetable', PDO::FETCH_ASSOC) as $dayopentime) {
-                            echo $dayopentime['jour'].' : ';
+                            echo '<tr>';
+                            echo '<td>'.$dayopentime['jour'].' : '.'</td>';
+                            echo '<td>';
                             if ($dayopentime['okam']!==0){
-                                echo $dayopentime['opentimeam'].'  '.$dayopentime['closetimeam'];
+                                echo $dayopentime['opentimeam'].' -'.'</td>'.'<td>'.$dayopentime['closetimeam'];
                             } else{
-                                echo 'Fermé';
+                                echo 'Fermé'.'</td>'.'<td>';
                             }
-                            echo ' | ';
+                            echo '</td>';
+                            echo '<td>';
                             if ($dayopentime['okpm']!==0){
-                                echo $dayopentime['opentimepm'].'  '.$dayopentime['opentimepm'].'</br>';
+                                echo $dayopentime['opentimepm'].' -'.'</td>'.'<td>'.$dayopentime['closetimepm'];
                             } else{
-                                echo 'Fermé.</br>';
+                                echo 'Fermé'.'</td>'.'<td>';
                             }
+                            echo'</td>';
+                            echo '</tr>';
                         }} catch (PDOException $e) {
                         echo 'erreur lors de la connexion';
                     }
-
                     ?>
 
                 </table>
