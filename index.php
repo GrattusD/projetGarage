@@ -24,8 +24,8 @@
                 <ul class="flex">
                     <li class="selectedPage"><a href="/../index.php"> Accueil </a></li>
                     <li><a href="/pages/reparations.php"> Carrosserie et Réparation </a></li>
-                    <li><a href="/pages/occasion.html"> Véhicules d'occasion </a></li>
-                    <li><a href="/pages/interne.html"> Interne </a></li>
+                    <li><a href="/pages/occasion.php"> Véhicules d'occasion </a></li>
+                    <li><a href="/pages/interne.php"> Interne </a></li>
                     <li><a href="/pages/contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -105,7 +105,6 @@
                         echo 'erreur lors de la connexion';
                     }
                 ?>
-
                 </table>
             </div>
             
