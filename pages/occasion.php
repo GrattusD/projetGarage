@@ -26,9 +26,9 @@
 
             <nav>
                 <ul class="flex">
-                    <li><a href="/../index.html"> Accueil </a></li>
-                    <li><a href="/pages/reparations.html"> Carrosserie et Réparation </a></li>
-                    <li class="selectedPage"><a href="/pages/occasion.html"> Véhicules d'occasion </a></li>
+                    <li><a href="/../index.php"> Accueil </a></li>
+                    <li><a href="/pages/reparations.php"> Carrosserie et Réparation </a></li>
+                    <li class="selectedPage"><a href="/pages/occasion.php"> Véhicules d'occasion </a></li>
                     <li><a href="/pages/interne.html"> Interne </a></li>
                     <li><a href="/pages/contact.html">Contact</a></li>
                 </ul>
@@ -96,6 +96,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="filterContent">
                         <div class="filterGroup">
                             <h4>Kilomètrage</h4>
@@ -114,12 +115,9 @@
                     <button type="button" id="filtrer" class="btn">Filtrer </div>
                 </div>
             </aside>
-            
-            
-            <div id='root'>
-            </div>
-                <!--Dans cette section nous ferons apparaitre les résultats avec les cartes des véhicules-->
-                <section class="flex" id="listVehicules"></section>
+        </section>
+            <!--Dans cette section nous ferons apparaitre les résultats avec les cartes des véhicules-->
+        <section class="flex" id="listVehicules"></section>
 
             <div class="container row row-cols-1 row-cols-sm-2 row-cols-md-3 g-0">
                 <div class="col">

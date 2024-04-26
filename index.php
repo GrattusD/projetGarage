@@ -22,8 +22,8 @@
 
             <nav>
                 <ul class="flex">
-                    <li class="selectedPage"><a href="/../index.html"> Accueil </a></li>
-                    <li><a href="/pages/reparations.html"> Carrosserie et Réparation </a></li>
+                    <li class="selectedPage"><a href="/../index.php"> Accueil </a></li>
+                    <li><a href="/pages/reparations.php"> Carrosserie et Réparation </a></li>
                     <li><a href="/pages/occasion.html"> Véhicules d'occasion </a></li>
                     <li><a href="/pages/interne.html"> Interne </a></li>
                     <li><a href="/pages/contact.html">Contact</a></li>
@@ -104,7 +104,7 @@
                         }} catch (PDOException $e) {
                         echo 'erreur lors de la connexion';
                     }
-                    ?>
+                ?>
 
                 </table>
             </div>

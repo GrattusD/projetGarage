@@ -20,7 +20,6 @@
             <div>
                 <img class="logoParrot" src="/ressources/images/logogarageVParrot01.png" alt="logo garage V.Parrot">
             </div>
-
             <nav>
                 <ul class="flex">
                     <li><a href="/../index.php"> Accueil </a></li>
@@ -32,24 +31,24 @@
             </nav>
         </div>
     </header>
+
 <main>
     <div>
-
         <form action="/PHP/verification_connexion.php" method="post" id="form_connexion">
             <fieldset>
                 <legend>
                     <h2>Connexion</h2>
-                </legend>
-                <div id="div_username">
-                    <label for="username">Nom d'utilisateur : </label>
-                    <input type="text" id="username" name="nom utilisateur" placeholder="username" required>
-                </div>
-                <div id="div_pws">
-                    <label for="password">Mot de passe : </label>
-                    <input type="password" id="password" name="mot de passe" placeholder="password" required>
-                </div>
-            </fieldset>
-            <button class="btn" type="submit">Se connecter</button>
+                    </legend>
+                    <div id="div_username">
+                        <label for="username">Nom d'utilisateur : </label>
+                        <input type="text" id="username" name="username" placeholder="username" required>
+                        </div>
+                        <div id="div_pws">
+                            <label for="password">Mot de passe : </label>
+                            <input type="password" id="password" name="password" placeholder="mot de passe" required>
+                            </div>
+                            </fieldset>
+                            <button class="btn" type="submit">Se connecter</button>
         </form>
     </div>
 
@@ -60,10 +59,43 @@
         <div class="footer-container flex">
             <div id="timetable" class="footer-col">
                 <h2>horaires d'ouverture</h2>
-                <table>
-                    <tr>lundi : </tr>
+                <table >
+                    <thead>
+                        <tr>
+                            <th>Jour</th>
+                            <th colspan="2">Matin</th>
+                            <th colspan="2">Après-midi</th>
+                <?php   
+                    include('../../config.php');
+                    /*construction de la table des horaires avec php*/
+                    try{
+                        $horairespdo = new PDO('mysql:host='.$dbHost.';dbname='.$dbName, $dbUsername, $dbPassword);
+                        foreach ($horairespdo->query('SELECT jour, okam, DATE_FORMAT(opentimeam, "%H:%i") as opentimeam, DATE_FORMAT(closetimeam, "%H:%i") as closetimeam, okpm, DATE_FORMAT(opentimepm, "%H:%i") as opentimepm, DATE_FORMAT(closetimepm, "%H:%i") as closetimepm FROM timetable', PDO::FETCH_ASSOC) as $dayopentime) {
+                            echo '<tr>';
+                            echo '<td>'.$dayopentime['jour'].' : '.'</td>';
+                            echo '<td>';
+                            if ($dayopentime['okam']!==0){
+                                echo $dayopentime['opentimeam'].' -'.'</td>'.'<td>'.$dayopentime['closetimeam'];
+                            } else{
+                                echo 'Fermé'.'</td>'.'<td>';
+                            }
+                            echo '</td>';
+                            echo '<td>';
+                            if ($dayopentime['okpm']!==0){
+                                echo $dayopentime['opentimepm'].' -'.'</td>'.'<td>'.$dayopentime['closetimepm'];
+                            } else{
+                                echo 'Fermé'.'</td>'.'<td>';
+                            }
+                            echo'</td>';
+                            echo '</tr>';
+                        }} catch (PDOException $e) {
+                        echo 'erreur lors de la connexion';
+                    }
+                ?>
+
                 </table>
             </div>
+            
             <div id="Garagemap" class="footer-col">
                 <h2>Notre Adresse</h2>
                 <p>123 rue Henri Dunant, 31000 Toulouse</p>
