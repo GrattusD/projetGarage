@@ -27,7 +27,7 @@
                     <li><a href="/pages/reparations.php"> Carrosserie et Réparation </a></li>
                     <li><a href="/pages/occasion.php"> Véhicules d'occasion </a></li>
                     <li><a href="/pages/interne.php"> Interne </a></li>
-                    <li class="selectedPage"><a href="/pages/contact.html">Contact</a></li>
+                    <li class="selectedPage"><a href="/pages/contact.php">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -94,8 +94,40 @@
         <div class="footer-container flex">
             <div id="timetable" class="footer-col">
                 <h2>horaires d'ouverture</h2>
-                <table>
-                    <tr>lundi : </tr>
+                <h2>horaires d'ouverture</h2>
+                <table >
+                    <thead>
+                        <tr>
+                            <th>Jour</th>
+                            <th colspan="2">Matin</th>
+                            <th colspan="2">Après-midi</th>
+                <?php   
+                    include('../../config.php');
+                    /*construction de la table des horaires avec php*/
+                    try{
+                        $horairespdo = new PDO('mysql:host='.$dbHost.';dbname='.$dbName, $dbUsername, $dbPassword);
+                        foreach ($horairespdo->query('SELECT jour, okam, DATE_FORMAT(opentimeam, "%H:%i") as opentimeam, DATE_FORMAT(closetimeam, "%H:%i") as closetimeam, okpm, DATE_FORMAT(opentimepm, "%H:%i") as opentimepm, DATE_FORMAT(closetimepm, "%H:%i") as closetimepm FROM timetable', PDO::FETCH_ASSOC) as $dayopentime) {
+                            echo '<tr>';
+                            echo '<td>'.$dayopentime['jour'].' : '.'</td>';
+                            echo '<td>';
+                            if ($dayopentime['okam']!==0){
+                                echo $dayopentime['opentimeam'].' -'.'</td>'.'<td>'.$dayopentime['closetimeam'];
+                            } else{
+                                echo 'Fermé'.'</td>'.'<td>';
+                            }
+                            echo '</td>';
+                            echo '<td>';
+                            if ($dayopentime['okpm']!==0){
+                                echo $dayopentime['opentimepm'].' -'.'</td>'.'<td>'.$dayopentime['closetimepm'];
+                            } else{
+                                echo 'Fermé'.'</td>'.'<td>';
+                            }
+                            echo'</td>';
+                            echo '</tr>';
+                        }} catch (PDOException $e) {
+                        echo 'erreur lors de la connexion';
+                    }
+                ?>
                 </table>
             </div>
             <div id="Garagemap" class="footer-col">

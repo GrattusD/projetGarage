@@ -26,7 +26,7 @@
                     <li><a href="/pages/reparations.php"> Carrosserie et Réparation </a></li>
                     <li><a href="/pages/occasion.php"> Véhicules d'occasion </a></li>
                     <li class="selectedPage"><a href="/pages/interne.php"> Interne </a></li>
-                    <li><a href="/pages/contact.html">Contact</a></li>
+                    <li><a href="/pages/contact.php">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -38,17 +38,17 @@
             <fieldset>
                 <legend>
                     <h2>Connexion</h2>
-                    </legend>
-                    <div id="div_username">
-                        <label for="username">Nom d'utilisateur : </label>
-                        <input type="text" id="username" name="username" placeholder="username" required>
-                        </div>
-                        <div id="div_pws">
-                            <label for="password">Mot de passe : </label>
-                            <input type="password" id="password" name="password" placeholder="mot de passe" required>
-                            </div>
-                            </fieldset>
-                            <button class="btn" type="submit">Se connecter</button>
+                </legend>
+                <div id="div_username">
+                    <label for="username">Nom d'utilisateur : </label>
+                    <input type="text" id="username" name="username" placeholder="username" required>
+                </div>
+                <div id="div_pws">
+                    <label for="password">Mot de passe : </label>
+                    <input type="password" id="password" name="password" placeholder="mot de passe" required>
+                </div>
+            </fieldset>
+            <button class="btn" type="submit">Se connecter</button>
         </form>
     </div>
 

@@ -28,10 +28,10 @@ try{
         if ($password === $user['password']) {
             /*login et password ok*/
             if ($user['status'] === "Admin") {
-                header('location: ../pages/adminparrot.php');
+                header('location: /pages/adminparrot.php');
                 exit;
             } else {
-                header('location: ../pages/page_interne.html');
+                header('location: /pages/page_interne.html');
             }
         } else {
             /*mauvais password*/

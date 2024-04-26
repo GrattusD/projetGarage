@@ -20,21 +20,20 @@
             <div>
                 <img class="logoParrot" src="/ressources/images/logogarageVParrot01.png" alt="logo garage V.Parrot">
             </div>
-
             <nav>
                 <ul class="flex">
                     <li><a href="/../index.php"> Accueil </a></li>
                     <li><a href="/pages/reparations.php"> Carrosserie et Réparation </a></li>
                     <li><a href="/pages/occasion.php"> Véhicules d'occasion </a></li>
                     <li class="selectedPage"><a href="/pages/interne.php"> Interne </a></li>
-                    <li><a href="/pages/contact.html">Contact</a></li>
+                    <li><a href="/pages/contact.php">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
 <main>
     <div>
-
         <form action="/PHP/verification_connexion.php" method="post" id="form_connexion">
             <fieldset>
                 <legend>
@@ -42,11 +41,11 @@
                 </legend>
                 <div id="div_username">
                     <label for="username">Nom d'utilisateur : </label>
-                    <input type="text" id="username" name="nom utilisateur" placeholder="username" required>
+                    <input type="text" id="username" name="username" placeholder="username" required>
                 </div>
                 <div id="div_pws">
                     <label for="password">Mot de passe : </label>
-                    <input type="password" id="password" name="mot de passe" placeholder="password" required>
+                    <input type="password" id="password" name="password" placeholder="mot de passe" required>
                 </div>
             </fieldset>
             <button class="btn" type="submit">Se connecter</button>
