@@ -34,7 +34,7 @@
 
 <main>
     <div>
-        <form action="/PHP/verification_connexion.php" method="post" id="form_connexion">
+        <form action="/php/verification_connexion.php" method="post" id="form_connexion">
             <fieldset>
                 <legend>
                     <h2>Connexion</h2>
