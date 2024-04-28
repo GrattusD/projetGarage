@@ -17,7 +17,7 @@
         </div>
         <div class="container flex">
             <div>
-                <img class="logoParrot" src="/ressources/images/logogarageVParrot01.png" alt="logo garage V.Parrot">
+                <img class="logoParrot" src="../ressources/images/logogarageVParrot01.png" alt="logo garage V.Parrot">
             </div>
 
             <nav>

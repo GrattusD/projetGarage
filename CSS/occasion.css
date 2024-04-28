@@ -36,6 +36,17 @@ aside{
     height:fit-content;
 }
 
+.minMax{
+    display: flex;
+}
+
+.minMax input{
+    width: 50px;
+}
+
+.filterContent{
+    margin-bottom: 20px;
+}
 .card{
     margin: 10px;
 }
@@ -57,16 +68,4 @@ h1{
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
-}
-
-.minMax{
-    display: flex;
-}
-
-.minMax input{
-    width: 50px;
-}
-
-.filterContent{
-    margin-bottom: 20px;
 }

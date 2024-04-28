@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/CSS/headerfooter.css">
+    <link rel="stylesheet" href="../CSS/headerfooter.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/CSS/employee.css">
+    <link rel="stylesheet" href="../CSS/employee.css">
 
 </head>
 <body>
@@ -19,11 +18,11 @@
 
             <nav>
                 <ul class="flex">
-                    <li><a href="/../index.php"> Accueil </a></li>
-                    <li><a href="/pages/reparations.php"> Carrosserie et Réparation </a></li>
-                    <li><a href="/pages/occasion.php"> Véhicules d'occasion </a></li>
-                    <li class="selectedPage"><a href="/pages/interne.php"> Interne </a></li>
-                    <li><a href="/pages/contact.php">Contact</a></li>
+                    <li><a href="../index.php"> Accueil </a></li>
+                    <li><a href="../pages/reparations.php"> Carrosserie et Réparation </a></li>
+                    <li><a href="../pages/occasion.php"> Véhicules d'occasion </a></li>
+                    <li class="selectedPage"><a href="../pages/interne.php"> Interne </a></li>
+                    <li><a href="../pages/contact.php">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -144,7 +143,7 @@
                             <th colspan="2">Matin</th>
                             <th colspan="2">Après-midi</th>
                 <?php   
-                    include('../config.php');
+                    include('../../config.php');
                     /*construction de la table des horaires avec php*/
                     try{
                         $horairespdo = new PDO('mysql:host='.$dbHost.';dbname='.$dbName, $dbUsername, $dbPassword);
@@ -177,7 +176,7 @@
                 <p>123 rue Henri Dunant, 31000 Toulouse</p>
                 <p>Tél: 05 25 25 25 XX</p>
                 <div class="flex garage-map">
-                    <img src="/ressources/images/plan_garage.png" alt="plan de la ville">
+                    <img src="../ressources/images/plan_garage.png" alt="plan de la ville">
                 </div>
             </div>
             <div class="footer-col">
@@ -193,11 +192,12 @@
                         </a></li>
                 </ul>
                 <div class="social-icons">
-                    <img src="/ressources/images/facebook-logo.png" alt="logo facebook">
-                    <img src="/ressources/images/instagram-logo.png" alt="logo Instagram">
+                    <img src="../ressources/images/facebook-logo.png" alt="logo facebook">
+                    <img src="../ressources/images/instagram-logo.png" alt="logo Instagram">
                 </div>
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

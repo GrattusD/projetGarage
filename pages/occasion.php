@@ -5,13 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon projet Garage</title>
-    <link rel="stylesheet" href="/CSS/headerfooter.css">
-    <script crossorigin src=”https://unpkg.com/react@18/umd/react.development.js” defer></script>
-    <script crossorigin src=”https://unpkg.com/react-dom@18/umd/react-dom.development.js” defer></script>
+    <link rel="stylesheet" href="../CSS/headerfooter.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/CSS/occasion.css">
-
+    <link rel="stylesheet" href="../CSS/occasion.css">
+    
 </head>
 
 <body>
@@ -21,16 +18,16 @@
         </div>
         <div class="container flex">
             <div>
-                <img class="logoParrot" src="/ressources/images/logogarageVParrot01.png" alt="logo garage V.Parrot">
+                <img class="logoParrot" src="../ressources/images/logogarageVParrot01.png" alt="logo garage V.Parrot">
             </div>
 
             <nav>
                 <ul class="flex">
-                    <li><a href="/../index.php"> Accueil </a></li>
-                    <li><a href="/pages/reparations.php"> Carrosserie et Réparation </a></li>
-                    <li class="selectedPage"><a href="/pages/occasion.php"> Véhicules d'occasion </a></li>
-                    <li><a href="/pages/interne.php"> Interne </a></li>
-                    <li><a href="/pages/contact.php">Contact</a></li>
+                    <li><a href="../index.php"> Accueil </a></li>
+                    <li><a href="../pages/reparations.php"> Carrosserie et Réparation </a></li>
+                    <li class="selectedPage"><a href="../pages/occasion.php"> Véhicules d'occasion </a></li>
+                    <li><a href="../pages/interne.php"> Interne </a></li>
+                    <li><a href="../pages/contact.php">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -39,12 +36,12 @@
         <div class="bandeau shadow container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <img src="/ressources/images/mathieu-renier-4WBvCqeMaDE-unsplash.jpg" class="img-fluid img-header" alt="image voiture d'occasion">
+                    <img src="../ressources/images/mathieu-renier-4WBvCqeMaDE-unsplash.jpg" class="img-fluid img-header" alt="image voiture d'occasion">
                     <h1>Nos véhicules d'occasion</h1>
                 </div>
             </div>
         </div>
-
+        
         <section>
             <!-- ici on position la partie filtre avec les différents filtres-->
             <aside id="filters" class="shadow">
@@ -80,7 +77,7 @@
                             </div>
                         </div>
                     </div>
-
+                    
                     <div class="filterContent">
                         <div class="filterGroup">
                             <h4>Année</h4>
@@ -96,7 +93,7 @@
                             </div>
                         </div>
                     </div>
-
+                    
                     <div class="filterContent">
                         <div class="filterGroup">
                             <h4>Kilomètrage</h4>
@@ -115,66 +112,66 @@
                     <button type="button" id="filtrer" class="btn">Filtrer </div>
                 </div>
             </aside>
-        </section>
+            
             <!--Dans cette section nous ferons apparaitre les résultats avec les cartes des véhicules-->
-        <section class="flex" id="listVehicules"></section>
-
-            <div class="container row row-cols-1 row-cols-sm-2 row-cols-md-3 g-0">
-                <div class="col">
-                    <div class="card shadow" >
-                        <img src="../ressources/images/photosvoitures/renault.png" class="card-img-top" alt="image de la voiture">
-                        <div class="card-body">
-                            <h5 class="card-title">Modèle véhicule</h5>
-                            <p class="card-text">Prix :20000 </br>Année : 2018 </br>Kilomètrage : 78700 km</p>
-                            <a href="#" class="btn">Choisir ce véhicule</a>
+            <section class="flex" id="listVehicules">
+                <div class="container row row-cols-1 row-cols-sm-2 row-cols-md-3 g-0">
+                    <div class="col">
+                        <div class="card shadow" >
+                            <img src="../ressources/images/photosvoitures/renault.png" class="card-img-top" alt="image de la voiture">
+                            <div class="card-body">
+                                <h5 class="card-title">Modèle véhicule</h5>
+                                <p class="card-text">Prix :20000 </br>Année : 2018 </br>Kilomètrage : 78700 km</p>
+                                <a href="#" class="btn">Choisir ce véhicule</a>
+                            </div>
                         </div>
                     </div>
-                </div>
                     
-                <div class="col">
-                    <div class="card shadow" >
-                        <img src="../ressources/images/photosvoitures/renault.png" class="card-img-top" alt="image de la voiture">
-                        <div class="card-body">
-                            <h5 class="card-title">Modèle véhicule</h5>
-                            <p class="card-text">Prix :20000 </br>Année : 2018 </br>Kilomètrage : 78700 km</p>
-                            <a href="#" class="btn">Choisir ce véhicule</a>
+                    <div class="col">
+                        <div class="card shadow" >
+                            <img src="../ressources/images/photosvoitures/renault.png" class="card-img-top" alt="image de la voiture">
+                            <div class="card-body">
+                                <h5 class="card-title">Modèle véhicule</h5>
+                                <p class="card-text">Prix :20000 </br>Année : 2018 </br>Kilomètrage : 78700 km</p>
+                                <a href="#" class="btn">Choisir ce véhicule</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="card shadow" >
+                            <img src="../ressources/images/photosvoitures/renault.png" class="card-img-top" alt="image de la voiture">
+                            <div class="card-body">
+                                <h5 class="card-title">Modèle véhicule</h5>
+                                <p class="card-text">Prix :20000 </br>Année : 2018 </br>Kilomètrage : 78700 km</p>
+                                <a href="#" class="btn">Choisir ce véhicule</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="card shadow" >
+                            <img src="../ressources/images/photosvoitures/renault.png" class="card-img-top" alt="image de la voiture">
+                            <div class="card-body">
+                                <h5 class="card-title">Modèle véhicule</h5>
+                                <p class="card-text">Prix :20000 </br>Année : 2018 </br>Kilomètrage : 78700 km</p>
+                                <a href="#" class="btn">Choisir ce véhicule</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="col">
-                    <div class="card shadow" >
-                        <img src="../ressources/images/photosvoitures/renault.png" class="card-img-top" alt="image de la voiture">
-                        <div class="card-body">
-                            <h5 class="card-title">Modèle véhicule</h5>
-                            <p class="card-text">Prix :20000 </br>Année : 2018 </br>Kilomètrage : 78700 km</p>
-                            <a href="#" class="btn">Choisir ce véhicule</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col">
-                    <div class="card shadow" >
-                        <img src="../ressources/images/photosvoitures/renault.png" class="card-img-top" alt="image de la voiture">
-                        <div class="card-body">
-                            <h5 class="card-title">Modèle véhicule</h5>
-                            <p class="card-text">Prix :20000 </br>Année : 2018 </br>Kilomètrage : 78700 km</p>
-                            <a href="#" class="btn">Choisir ce véhicule</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </section>
         </section>
     </main>
-
-
-
-
-
+    
+    
+    
+    
+    
     <footer>
         <div class="footer-container flex">
             <div id="timetable" class="footer-col">
-            <h2>horaires d'ouverture</h2>
+                <h2>horaires d'ouverture</h2>
                 <table >
                     <thead>
                         <tr>
@@ -182,7 +179,7 @@
                             <th colspan="2">Matin</th>
                             <th colspan="2">Après-midi</th>
                 <?php   
-                    include('../config.php');
+                    include('../../config.php');
                     /*construction de la table des horaires avec php*/
                     try{
                         $horairespdo = new PDO('mysql:host='.$dbHost.';dbname='.$dbName, $dbUsername, $dbPassword);
@@ -205,9 +202,9 @@
                             echo'</td>';
                             echo '</tr>';
                         }} catch (PDOException $e) {
-                        echo 'erreur lors de la connexion';
-                    }
-                ?>
+                            echo 'erreur lors de la connexion';
+                        }
+                        ?>
                 </table>
             </div>
             <div id="Garagemap" class="footer-col">
@@ -215,7 +212,7 @@
                 <p>123 rue Henri Dunant, 31000 Toulouse</p>
                 <p>Tél: 05 25 25 25 XX</p>
                 <div class="flex garage-map">
-                    <img src="/ressources/images/plan_garage.png" alt="plan de la ville">
+                    <img src="../ressources/images/plan_garage.png" alt="plan de la ville">
                 </div>
             </div>
             <div class="footer-col">
@@ -224,20 +221,21 @@
                     <li><a href="">Qui sommes-nous?</a></li>
                     <li><a href="">Notre équipe</a></li>
                     <li><a href="">
-                            <p>Mentions légales
-                        </a></li>
-                    <li><a href="">
-                            <p>Connexion
-                        </a></li>
-                </ul>
-                <div class="social-icons">
-                    <img src="/ressources/images/facebook-logo.png" alt="logo facebook">
-                    <img src="/ressources/images/instagram-logo.png" alt="logo Instagram">
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script src=”occasion.js”></script>
-</body>
-
-</html>
+                        <p>Mentions légales
+                            </a></li>
+                            <li><a href="">
+                                <p>Connexion
+                                    </a></li>
+                                </ul>
+                                <div class="social-icons">
+                                    <img src="../ressources/images/facebook-logo.png" alt="logo facebook">
+                                    <img src="../ressources/images/instagram-logo.png" alt="logo Instagram">
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                    <script src=”occasion.js”></script>
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+                </body>
+                
+                </html>
