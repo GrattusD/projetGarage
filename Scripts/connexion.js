@@ -9,18 +9,37 @@ document.getElementById("form_connexion").addEventListener("submit", function(ev
 
     var formData= new FormData(this);
 
-    /*envoi ver le fichier php des données récupérées*/
-    var connex = new XMLHttpRequest();
-    var url= "../PHP/verification_connexion.php;"
-    connex.open("POST", url, true);
+    fetch("../PHP/verification_connexion.php", {
+        method: "POST",
+        body: formData
+    })
+    
+    .catch(error => {
+        // Gérer les erreurs
+        console.error("Erreur :", error);
+        alert("Erreur lors de la requête au serveur");
+    });
+});
+
+
+
+
+
+
+
+
+    /*envoi vers le fichier php des données récupérées*/
+/*    var connex = new XMLHttpRequest();
+    var url="../PHP/verification_connexion.php";
+    connex.open("post", url, true);
     connex.onreadystatechange= function(){
         if (connex.readyState === XMLHttpRequest.DONE){
             if (connex.status===200){
                 /*connexion serveur réussie*/
-                if (connex.responseText === "connexion_reussie"){
-                    window.location.href= "page_interne.html";
+/*                if (connex.responseText !== "Nom d'utilisateur ou mot de passe incorrect"){
+                    window.location.href= connex.responseText;
                 }else{
-                    alert("Nom d'utilisateur ou mot de passe incorrect");
+                    alert("Nom d'utilisateur ou mot de passe incorrect JS");
                 }
             }else{
                 alert("erreue lors de la requête");
@@ -29,3 +48,4 @@ document.getElementById("form_connexion").addEventListener("submit", function(ev
     };
     connex.send(formData);
 });
+*/

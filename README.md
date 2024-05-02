@@ -22,6 +22,16 @@ démarrer le control panel de xampp
 lancer Apache et Mysql
 importer la base de donnée du dossier Base de données Mysql (créer une nouvelle base de données sur votre serveur de base de données (ici ecfgarage et importer le fichier fourni avec mysql -u root -p ecfgarage < database_structure.sql ou copier les instructions de création en ligne de commande aprè connection à maria db))
 
+# page de connexion
+sur la page interne pour la connexion, vous pouvez utiliser les identifiants du gérant pour aller sur la page admin:
+identifiant: v.Parrot
+mdp: I_@mTheBoss
+
+et pour aller sur la page employé, vous pouvez utiliser les identifiants d'un employé pour aller sur la page employé:
+identifiant: f.Bichon
+mdp: ProDUg@rage55 
+
+
 # historique du deploiement, deploiement
  inscription sur alwaysdata
 

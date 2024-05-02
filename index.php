@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon projet Garage</title>
     
-    <link rel="stylesheet" href="/CSS/headerfooter.css">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="CSS/headerfooter.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -17,16 +17,16 @@
         </div>
         <div class="container flex">
             <div>
-                <img class="logoParrot" src="../ressources/images/logogarageVParrot01.png" alt="logo garage V.Parrot">
+                <img class="logoParrot" src="ressources/images/logogarageVParrot01.png" alt="logo garage V.Parrot">
             </div>
 
             <nav>
                 <ul class="flex">
-                    <li class="selectedPage"><a href="/../index.php"> Accueil </a></li>
-                    <li><a href="/pages/reparations.php"> Carrosserie et Réparation </a></li>
-                    <li><a href="/pages/occasion.php"> Véhicules d'occasion </a></li>
-                    <li><a href="/pages/interne.php"> Interne </a></li>
-                    <li><a href="/pages/contact.php">Contact</a></li>
+                    <li class="selectedPage"><a href="index.php"> Accueil </a></li>
+                    <li><a href="pages/reparations.php"> Carrosserie et Réparation </a></li>
+                    <li><a href="pages/occasion.php"> Véhicules d'occasion </a></li>
+                    <li><a href="pages/interne.php"> Interne </a></li>
+                    <li><a href="pages/contact.php">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -35,7 +35,7 @@
     <main>
         <div class="herosection flex">
             <div class="heropic flex">
-                <img src="/ressources/images/responsableGarage.jpg" alt="M.Parrot responsable du garage">
+                <img src="ressources/images/responsableGarage.jpg" alt="M.Parrot responsable du garage">
             </div>
             <div class="column">
                 <h1 class="herotitle">L'Excellence Automobile à Toulouse depuis 2021</h1>
@@ -50,22 +50,22 @@
         <br>
         <div class="section flex">
         <div>
-                <img src="/ressources/images/garage01.jpg" alt="voiture et garagiste">
+                <img src="ressources/images/garage01.jpg" alt="voiture et garagiste">
             </div>
             <h2>réparations</h2>
             <p>Pour une réparation, l'entretien de cotre véhicules ou pour améliorer votre voiture, vous pouvez compter sur notre équipe expérimentée pour prendre soin de votre véhicule.
                 Retrouvez l'ensemble de notre offre.
             </p>
-            <a href="/pages/reparations.php" class="button-link">Découvrez nos prestations</a>
+            <a href="pages/reparations.php" class="button-link">Découvrez nos prestations</a>
         </div>
         <br>
         <div class="section flex">
             <div>
-                <img src="/ressources/images/mathieu-renier-4WBvCqeMaDE-unsplash.jpg" alt="véhicule d'occasion">
+                <img src="ressources/images/mathieu-renier-4WBvCqeMaDE-unsplash.jpg" alt="véhicule d'occasion">
             </div>
             <h2>véhicules d'occasion</h2>
             <p>Découvrez toute une gamme de véhicules d'occasion que nous avons pris soin de préparer pour vous! Vous trouverez votre bonheur dans notre garage.</p>
-            <a href="/pages/occasion.php"class="button-link">Découvrez nos véhicules</a>    
+            <a href="pages/occasion.php"class="button-link">Découvrez nos véhicules</a>    
         </div>
         <br>
     </main>
@@ -104,8 +104,8 @@
                             echo'</td>';
                             echo '</tr>';
                         }} catch (PDOException $e) {
-                        echo 'erreur lors de la connexion';
-                    }
+                            echo 'erreur lors de la connexion';
+                        }
                 ?>
                 </table>
             </div>
@@ -115,7 +115,7 @@
                 <p>123 rue Henri Dunant, 31000 Toulouse</p>
                 <p>Tél: 05 25 25 25 XX</p>
                 <div class="flex garage-map">
-                    <img src="/ressources/images/plan_garage.png" alt="plan de la ville">
+                    <img src="ressources/images/plan_garage.png" alt="plan de la ville">
                 </div>
             </div>
             <div class="footer-col">
@@ -131,8 +131,8 @@
                         </a></li>
                 </ul>
                 <div class="social-icons">
-                    <img src="/ressources/images/facebook-logo.png" alt="logo facebook">
-                    <img src="/ressources/images/instagram-logo.png" alt="logo Instagram">
+                    <img src="ressources/images/facebook-logo.png" alt="logo facebook">
+                    <img src="ressources/images/instagram-logo.png" alt="logo Instagram">
                 </div>
             </div>
         </div>
