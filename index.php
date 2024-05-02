@@ -56,6 +56,7 @@
             <p>Pour une réparation, l'entretien de cotre véhicules ou pour améliorer votre voiture, vous pouvez compter sur notre équipe expérimentée pour prendre soin de votre véhicule.
                 Retrouvez l'ensemble de notre offre.
             </p>
+            <a href="/pages/reparations.php" class="button-link">Découvrez nos prestations</a>
         </div>
         <br>
         <div class="section flex">
@@ -64,6 +65,7 @@
             </div>
             <h2>véhicules d'occasion</h2>
             <p>Découvrez toute une gamme de véhicules d'occasion que nous avons pris soin de préparer pour vous! Vous trouverez votre bonheur dans notre garage.</p>
+            <a href="/pages/occasion.php"class="button-link">Découvrez nos véhicules</a>    
         </div>
         <br>
     </main>
