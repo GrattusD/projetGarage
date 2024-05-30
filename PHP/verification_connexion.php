@@ -1,5 +1,5 @@
 <?php
-include('../../config.php');
+include_once'../../config.php';
 
 try{
     /*on nettoie l'input de l'utilisateur avec injection*/
@@ -8,13 +8,13 @@ try{
     $username = $_POST['username'];
     $password = $_POST['password'];
     /* une fonction qui filtre les données*/
-    function filter_form($data) {
+    function filterForm($data) {
         $data = trim($data);
         $data = stripslashes($data);
         return $data;
     }
-    /*filter_form($username);
-    filter_form($password);*/
+    /*filterForm($username);
+    filterForm($password);*/
     
     
     /*préparation de la requête pour vérifier*/
