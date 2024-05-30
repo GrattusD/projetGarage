@@ -65,7 +65,7 @@
             </div>
             <h2>véhicules d'occasion</h2>
             <p>Découvrez toute une gamme de véhicules d'occasion que nous avons pris soin de préparer pour vous! Vous trouverez votre bonheur dans notre garage.</p>
-            <a href="pages/occasion.php"class="button-link">Découvrez nos véhicules</a>    
+            <a href="pages/occasion.php"class="button-link">Découvrez nos véhicules</a>
         </div>
         <br>
     </main>
@@ -80,8 +80,8 @@
                             <th>Jour</th>
                             <th colspan="2">Matin</th>
                             <th colspan="2">Après-midi</th>
-                <?php   
-                    include('../config.php');
+                <?php
+                    include_once '../config.php';
                     /*construction de la table des horaires avec php*/
                     try{
                         $horairespdo = new PDO('mysql:host='.$dbHost.';dbname='.$dbName, $dbUsername, $dbPassword);
@@ -103,7 +103,8 @@
                             }
                             echo'</td>';
                             echo '</tr>';
-                        }} catch (PDOException $e) {
+                        }
+                    } catch (PDOException $e) {
                             echo 'erreur lors de la connexion';
                         }
                 ?>

@@ -64,8 +64,8 @@
                             <th>Jour</th>
                             <th colspan="2">Matin</th>
                             <th colspan="2">Après-midi</th>
-                <?php   
-                    include('../../config.php');
+                <?php
+                    include_once('../../config.php');
                     /*construction de la table des horaires avec php*/
                     try{
                         $horairespdo = new PDO('mysql:host='.$dbHost.';dbname='.$dbName, $dbUsername, $dbPassword);
@@ -87,7 +87,8 @@
                             }
                             echo'</td>';
                             echo '</tr>';
-                        }} catch (PDOException $e) {
+                        }
+                    } catch (PDOException $e) {
                         echo 'erreur lors de la connexion';
                     }
                 ?>
