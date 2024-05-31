@@ -71,57 +71,6 @@
                 }
                 ?>
 
-<section class="card shadow">
-    <h3 class="card-header">
-        Freinage
-    </h3>
-    <div class="card-body">
-        <h5 class="card-title">
-            Pour la sécurité de votre voiture et la vôtre, les éléments de freinage doivent être en parfait état de fonctionnement.
-        </h5>
-        <ul class="card-text">
-            <li>Changement de plaquettes</li>
-            <li>Remplacement du kit de frein</li>
-            <li>Remplacement des disques de frein</li>
-            <li>Remplacement du liquide de frein</li>
-        </ul>
-    </div>
-</section>
-
-<section class="card shadow">
-    <h3 class="card-header">
-        Freinage
-    </h3>
-    <div class="card-body">
-        <h5 class="card-title">
-            Pour la sécurité de votre voiture et la vôtre, les éléments de freinage doivent être en parfait état de fonctionnement.
-        </h5>
-        <ul class="card-text">
-            <li>Changement de plaquettes</li>
-            <li>Remplacement du kit de frein</li>
-            <li>Remplacement des disques de frein</li>
-            <li>Remplacement du liquide de frein</li>
-        </ul>
-    </div>
-</section>
-
-<section class="card shadow">
-    <h3 class="card-header">
-        Freinage
-    </h3>
-    <div class="card-body">
-        <h5 class="card-title">
-            Pour la sécurité de votre voiture et la vôtre, les éléments de freinage doivent être en parfait état de fonctionnement.
-        </h5>
-        <ul class="card-text">
-            <li>Changement de plaquettes</li>
-            <li>Remplacement du kit de frein</li>
-            <li>Remplacement des disques de frein</li>
-            <li>Remplacement du liquide de frein</li>
-        </ul>
-    </div>
-</section>
-
 </main>
 <?php
 include_once '../php/footer.php';
