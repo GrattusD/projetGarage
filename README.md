@@ -25,7 +25,7 @@ importer la base de donnée du dossier Base de données Mysql (créer une nouvel
 # page de connexion
 sur la page interne pour la connexion, vous pouvez utiliser les identifiants du gérant pour aller sur la page admin:
 identifiant: v.Parrot
-mdp: I_@mTheBoss
+mdp: I_@mTheBoss1
 
 et pour aller sur la page employé, vous pouvez utiliser les identifiants d'un employé pour aller sur la page employé:
 identifiant: f.Bichon

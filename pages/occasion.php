@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,19 +53,32 @@
                 <div class="filterContent">
                     <div class="filterGroup">
                         <h4>Marques</h4>
-                        <div class=" form-check">
-                            <input type="checkbox" class="form-check-input" id="marque_renault" name="marque" value="Renault">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input filter-checkbox" id="marque_renault" name="marque" value="Renault">
                             <label class="form-check-label" for="marque_renault">Renault</label>
                         </div>
-                        <div class=" form-check">
-                            <input type="checkbox" class="form-check-input" id="marque_skoda" name="marque" value="Skoda">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input filter-checkbox" id="marque_skoda" name="marque" value="Skoda">
                             <label class="form-check-label" for="marque_skoda">Skoda</label>
                         </div>
-                        <div class=" form-check">
-                            <input type="checkbox" class="form-check-input" id="marque_toyota" name="marque" value="Toyota">
+                        <div class="form-check collapse" id="hidden-checkboxes">
+                            <input type="checkbox" class="form-check-input filter-checkbox" id="marque_toyota" name="marque" value="Toyota">
                             <label class="form-check-label" for="marque_toyota">Toyota</label>
                         </div>
-                    </div>
+                        <div class=" form-check collapse" id="hidden-checkboxes">
+                            <input type="checkbox" class="form-check-input filter-checkbox" id="marque_mercedes" name="marque" value="Mercedes">
+                            <label class="form-check-label" for="marque_mercedes">Mercedes</label>
+                        </div>
+                        <div class=" form-check collapse" id="hidden-checkboxes">
+                            <input type="checkbox" class="form-check-input filter-checkbox" id="marque_peugeot" name="marque" value="Peugeot">
+                            <label class="form-check-label" for="marque_peugeot">Peugeot</label>
+                        </div>
+                        <div class=" form-check collapse" id="hidden-checkboxes">
+                            <input type="checkbox" class="form-check-input filter-checkbox" id="marque_bmw" name="marque" value="BMW">
+                            <label class="form-check-label" for="marque_bmw">BMW</label>
+                        </div>
+                        </div>
+                    <button class="btn btn-secondary" data-bs-toggle="collapse" data-bs-target="#hidden-checkboxes" aria-expanded="false" aria-controls="hidden-checkboxes">Plus</button>
                     <div class="filterContent">
                         <div class="filterGroup">
                             <h4>Prix</h4>
@@ -109,16 +126,38 @@
                             </div>
                         </div>
                     </div>
-                    <button type="button" id="filtrer" class="btn">Filtrer </div>
+                    <button type="button" id="apply-filters" class="btn btn-primary">Filtres</button>
                 </div>
             </aside>
             
             <!--Dans cette section nous ferons apparaitre les résultats avec les cartes des véhicules-->
             <section class="flex" id="listVehicules">
                 <div class="container row row-cols-1 row-cols-sm-2 row-cols-md-3 g-0">
+            
+            
+                <?php
+            include_once'../../config.php';
+            try{
+                $pdo = new PDO('mysql:host='.$dbHost.';dbname='.$dbName, $dbUsername, $dbPassword);
+                foreach ($pdo->query('SELECT * FROM vehicules', PDO::FETCH_ASSOC)as $vehicule) {
+                    echo '<div class="col vehicle-card" data-marque="'.$vehicule['marque'].'">';
+                    echo '<div class="card shadow" >';
+                    echo '<img src="../ressources/images/photosvoitures/'.$vehicule['marque'].$vehicule['modele'].'.png" class="card-img-top" alt="la voiture">';
+                    echo '<div class="card-body">';
+                    echo '<h5 class="card-title">'.$vehicule['marque'].' '.$vehicule['modele'].'</h5>';
+                    echo '<p class="card-text">Prix : '.$vehicule['prix'].' </br>Année : 2'.$vehicule['date_mise_circulation'].' </br>Kilomètrage : '.$vehicule['kilometrage'].' km</p>';
+                    echo '<a href="#" class="btn">Choisir ce véhicule</a>';
+                    echo '</div></div></div>';
+                    }
+                }catch (PDOException $e) {
+                        echo 'erreur lors de a connexion:'.$e->getMessage();
+                    }
+                    ?>
+
+
                     <div class="col">
                         <div class="card shadow" >
-                            <img src="../ressources/images/photosvoitures/renault.png" class="card-img-top" alt="la voiture">
+                            <img src="../ressources/images/photosvoitures/renaultclio.png" class="card-img-top" alt="la voiture">
                             <div class="card-body">
                                 <h5 class="card-title">Modèle véhicule</h5>
                                 <p class="card-text">Prix :20000 </br>Année : 2018 </br>Kilomètrage : 78700 km</p>
@@ -129,7 +168,7 @@
                     
                     <div class="col">
                         <div class="card shadow" >
-                            <img src="../ressources/images/photosvoitures/renault.png" class="card-img-top" alt="la voiture">
+                            <img src="../ressources/images/photosvoitures/fiat500.png" class="card-img-top" alt="la voiture">
                             <div class="card-body">
                                 <h5 class="card-title">Modèle véhicule</h5>
                                 <p class="card-text">Prix :20000 </br>Année : 2018 </br>Kilomètrage : 78700 km</p>
@@ -140,7 +179,7 @@
                     
                     <div class="col">
                         <div class="card shadow" >
-                            <img src="../ressources/images/photosvoitures/renault.png" class="card-img-top" alt="la voiture">
+                            <img src="../ressources/images/photosvoitures/renaultclio.png" class="card-img-top" alt="la voiture">
                             <div class="card-body">
                                 <h5 class="card-title">Modèle véhicule</h5>
                                 <p class="card-text">Prix :20000 </br>Année : 2018 </br>Kilomètrage : 78700 km</p>
@@ -151,7 +190,7 @@
                     
                     <div class="col">
                         <div class="card shadow" >
-                            <img src="../ressources/images/photosvoitures/renault.png" class="card-img-top" alt="la voiture">
+                            <img src="../ressources/images/photosvoitures/renaultclio.png" class="card-img-top" alt="la voiture">
                             <div class="card-body">
                                 <h5 class="card-title">Modèle véhicule</h5>
                                 <p class="card-text">Prix :20000 </br>Année : 2018 </br>Kilomètrage : 78700 km</p>
@@ -170,6 +209,7 @@
     ?>
 
     <script src=”occasion.js”></script>
+    <script src="jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
