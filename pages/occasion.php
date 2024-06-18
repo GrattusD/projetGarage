@@ -142,7 +142,8 @@ session_start();
                 foreach ($pdo->query('SELECT * FROM vehicules', PDO::FETCH_ASSOC)as $vehicule) {
                     echo '<div class="col vehicle-card" data-marque="'.$vehicule['marque'].'">';
                     echo '<div class="card shadow" >';
-                    echo '<img src="../ressources/images/photosvoitures/'.$vehicule['marque'].$vehicule['modele'].'.png" class="card-img-top" alt="la voiture">';
+                    $imageName = strtolower($vehicule['marque'].$vehicule['modele']);
+                    echo '<img src="../ressources/images/photosvoitures/'.$imageName.'.png" class="card-img-top" alt="la voiture">';
                     echo '<div class="card-body">';
                     echo '<h5 class="card-title">'.$vehicule['marque'].' '.$vehicule['modele'].'</h5>';
                     echo '<p class="card-text">Prix : '.$vehicule['prix'].' </br>Année : 2'.$vehicule['date_mise_circulation'].' </br>Kilomètrage : '.$vehicule['kilometrage'].' km</p>';
