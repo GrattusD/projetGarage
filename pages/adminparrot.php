@@ -82,26 +82,34 @@ session_start();
                     Ajouter une nouvelle offre de service
                 </button>
             </h2>
-            <form action= "../PHP/new_data_form.php" method="POST">
+            <form action= "../PHP/addoffer.php" method="POST">
             <input type="hidden" name="form_data_group" value= "newOffer">
                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="accordionAdmin">
                     <div class="accordion-body">
                         <div class="row g-2 needs-validation">
                             <div class="col-md-6">
-                                <label for="firstName"class="form-label">Titre</label>
-                                <input type="text" class="form-control" id="firstName" required>
+                                <label for="title"class="form-label">Titre de la prestation</label>
+                                <input type="text" class="form-control" id="title" name='title'required>
                             </div>
                             <div class="col-md-6">
-                                <label for="lastName"class="form-label">Nom</label>
-                                <input type="text" class="form-control" id="lastName" required>
+                                <label for="body"class="form-label">Description</label>
+                                <input type="text" class="form-control" id="body" name='body' required>
                             </div>
                             <div class="col-md-6">
-                                <label for="lastName"class="form-label">Nom utilisateur</label>
-                                <input type="text" class="form-control" id="lastName" required>
+                                <label for="offer1"class="form-label">Service 1</label>
+                                <input type="text" class="form-control" id="offer1" name='offer1' required>
                             </div>
                             <div class="col-md-6">
-                                <label for="lastName"class="form-label">Mot de passe</label>
-                                <input type="text" class="form-control" id="lastName" required>
+                                <label for="offer2"class="form-label">Service 2</label>
+                                <input type="text" class="form-control" id="offer2" name='offer2' required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="offer3"class="form-label">Service 3</label>
+                                <input type="text" class="form-control" id="offer3" name='offer3' required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="offer4"class="form-label">Service 4</label>
+                                <input type="text" class="form-control" id="offer4" name='offer4'>
                             </div>
                         </div>
                     </div>
